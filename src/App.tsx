@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
-import Dashboard from "./pages/Dashboard";
+import Chat from "./pages/Chat";
+import Boards from "./pages/Boards";
 import BoardDetail from "./pages/BoardDetail";
 import SharedBoard from "./pages/SharedBoard";
 import Settings from "./pages/Settings";
@@ -38,10 +39,26 @@ function AppRoutes() {
       <Route path="/" element={<Index />} />
       <Route path="/auth" element={<Auth />} />
       <Route
-        path="/dashboard"
+        path="/chat"
         element={
           <ProtectedRoute>
-            <Dashboard />
+            <Chat />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/chat/:id"
+        element={
+          <ProtectedRoute>
+            <Chat />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/boards"
+        element={
+          <ProtectedRoute>
+            <Boards />
           </ProtectedRoute>
         }
       />
