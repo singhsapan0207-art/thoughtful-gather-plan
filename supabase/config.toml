@@ -1,10 +1,10 @@
 project_id = "oxvpvvmrbzncknexbjjc"
 
 [functions.extract-product]
-verify_jwt = false
+verify_jwt = true
 
 [functions.generate-board-insight]
-verify_jwt = false
+verify_jwt = true
 
 [functions.generate-product-note]
-verify_jwt = false
+verify_jwt = true
