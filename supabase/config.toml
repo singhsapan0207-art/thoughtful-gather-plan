@@ -8,3 +8,6 @@ verify_jwt = true
 
 [functions.generate-product-note]
 verify_jwt = true
+
+[functions.chat]
+verify_jwt = true
